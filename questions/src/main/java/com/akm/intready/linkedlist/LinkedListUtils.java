@@ -38,7 +38,7 @@ public class LinkedListUtils {
         }
         if (getLengthOfLinkedList(head) < index) {
             System.out.println("Insertion is not possible");
-            return null;
+            return head;
         }
         int ctr = 0;
         Node cNode = head;
@@ -47,11 +47,31 @@ public class LinkedListUtils {
             cNode = cNode.getNext();
             ctr++;
         }
-        if(null!= cNode.getNext()) {
-           next = cNode.getNext();
+        if (null != cNode.getNext()) {
+            next = cNode.getNext();
         }
         cNode.setNext(nodeToInserted);
         nodeToInserted.setNext(next);
+        return head;
+    }
+
+    public static Node deleteNode(Node head, int nodeIndexToBeDeleted) {
+        if (null == head) {
+            return null;
+        }
+        if (getLengthOfLinkedList(head) < nodeIndexToBeDeleted) {
+            System.out.println("deletion is not possible");
+            return head;
+        }
+        int ctr = 0;
+        Node cNode = head;
+        while (ctr != nodeIndexToBeDeleted) {
+            cNode = cNode.getNext();
+            ctr++;
+        }
+        Node ntd = cNode.getNext();
+        cNode.setNext(ntd.getNext());
+        ntd = null;
         return head;
     }
 

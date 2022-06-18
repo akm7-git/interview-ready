@@ -9,5 +9,8 @@ public class LInkedListTest {
         head = LinkedListUtils.insertNode(head, 10, 4);
         System.out.println("Length of the linkedlist is : " + LinkedListUtils.getLengthOfLinkedList(head));
         LinkedListUtils.printLinkedList(head);
+        LinkedListUtils.deleteNode(head,4);
+        System.out.println("Length of the linkedlist is : " + LinkedListUtils.getLengthOfLinkedList(head));
+        LinkedListUtils.printLinkedList(head);
     }
 }
