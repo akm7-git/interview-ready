@@ -29,6 +29,7 @@ public class MissingSmallestPositiveInteger {
         for (int i = 2; i < maxNo; i++) {
             if (!noList.contains(i)) {
                 result = i;
+                break;
             }
         }
         return result;
