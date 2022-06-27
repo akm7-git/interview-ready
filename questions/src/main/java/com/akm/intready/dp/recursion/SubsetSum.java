@@ -2,6 +2,18 @@ package com.akm.intready.dp.recursion;
 
 public class SubsetSum {
 
+    /***
+     *
+     * @param arr
+     * @param endIndex
+     * @param sum
+     * @return
+     *
+     * Famous DP question, In a given array , check if a solution exists for the given no
+     * in an array of {2,3} -> a subset sum of 5 is possible where as a subset sum of 4 is not
+     *
+     */
+
     public boolean DoesASolutionExist(int[] arr, int endIndex, int sum) {
         boolean solutionExists = false;
         if (sum == 0) {
